@@ -24,8 +24,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-      - name: Setup Golang with cache
-        uses: magnetikonline/action-golang-cache@v5
+      - name: Setup Golang
+        uses: actions/setup-go@v5
         with:
           go-version-file: go.mod
       - name: Build
