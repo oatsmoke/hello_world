@@ -26,8 +26,8 @@ jobs:
           path: ~/go/pkg/mod
           key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
           restore-keys: ${{ runner.os }}-go-
-      - if: steps.go-cache.outputs.cache-hit != 'true'
-        run: go mod download
+#      - if: steps.go-cache.outputs.cache-hit != 'true'
+#        run: go mod download
 
       - name: Build
         run: go build -v .
